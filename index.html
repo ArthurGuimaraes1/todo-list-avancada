@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -14,9 +15,27 @@
         <div class="main">
             <div class="header">
                 <ol id="lista-header">
-                    <li><div class="buttons-header menu"><h3>Menu</h3></div></li>
-                    <li><div class="buttons-header barra"><h3>barra de pesquisa</h3></div></li>
-                    <li><div class="buttons-header add"><h3>ADD</h3></div></li>
+                    <li>
+                        <div class="buttons-header menu">
+                            <button id="button-menu">
+                                <i class="fa-solid fa-bars fa-lg" style="color: #0717f2;"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="buttons-header barra">
+                            <i class="fa-solid fa-magnifying-glass">
+                            </i>
+                                <input type="text" id="search" placeholder="Buscar tarefa...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="buttons-header add">
+                            <button id="button-add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </li>
                 </ol>
             </div>
 
