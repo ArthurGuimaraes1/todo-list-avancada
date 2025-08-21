@@ -18,7 +18,7 @@
                     <li>
                         <div class="buttons-header menu">
                             <button id="button-menu">
-                                <i class="fa-solid fa-bars fa-lg" style="color: #0717f2;"></i>
+                                <i class="fa-solid fa-bars fa-lg"></i>
                             </button>
                         </div>
                     </li>
@@ -87,7 +87,24 @@
                     </li>
                 </ul>
             </section>
-
+            <section class="pop-up" id="pop-up">
+                <div class="overlay"></div>
+                <div class="popup-content">
+                    <form id="task-form">
+                        <input type="text" 
+                        id="task-namer" 
+                        placeholder="Dê um nome para a sua tarefa..."
+                        minlength="3"
+                        required>
+                        <span id="error-msg" style="color:red; display:none;">
+                        A tarefa deve ter pelo menos 3 caracteres
+                        </span>
+                    </form>
+                    <button class="fechar-popUp">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </section>
         </div>
     </div>
     <script src="script.js"></script>
