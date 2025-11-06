@@ -6,7 +6,8 @@
 
 :root{
     --corDeFundo: rgb(248, 238, 228);
-    --corBotoes: rgb(7, 23, 242);
+    --corBotoes: white;
+    --corBordas: rgba(148, 163, 184, 0.1);
 }
 
 html{
@@ -26,9 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000000;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(6, 6, 120, 1) 35%, rgba(43, 24, 77, 1) 98%);
-  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #0f172a, #0f172a 30%, #1e293b 50%, #0f172a);  overflow-x: hidden;
 }
 
 #container{
@@ -45,7 +44,10 @@ body {
   min-width: 300px;     /* largura mínima em telas pequenas */
   min-height: 80vh;     /* altura mínima relativa à tela */
   margin: 0 auto;       /* centraliza horizontal */
-  background: rgb(255, 255, 255);
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 12px;
   padding: 2rem;
   box-sizing: border-box; /* garante que padding não aumente o tamanho */
@@ -71,7 +73,10 @@ body {
   padding: 4px;
   position: sticky;
   top: 0;
-  background-color: rgb(255, 255, 255);
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 12px;
 }
 
@@ -100,7 +105,7 @@ body {
   cursor: pointer; 
   padding-top: 5px; 
   transition-duration: 0.2s;
-  color: var(--corBotoes);
+  color: white;
 }
 
 #button-menu:active{
@@ -108,7 +113,7 @@ body {
 }
 
 .buttons-header.barra{
-  border: 1px solid #ccc; /* cinza claro em vez de preto */
+  border: 1px solid #f3f3f323; /* cinza claro em vez de preto */
   border-radius: 20px; /* cantos arredondados */
   margin: 0 auto;
   width: 110vh;
@@ -124,12 +129,12 @@ body {
 }
 
 .buttons-header.barra i{
-  color: #555;
+  color: #585858;
   margin-right: 8px;
 }
 
 .buttons-header.barra:focus-within i{
-  color: #000000;
+  color: var(--corBotoes);
 }
 
 .buttons-header.barra input{
@@ -137,6 +142,9 @@ body {
   outline: none;
   flex: 1; /* ocupa todo espaço restante */
   font-size: 14px;
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 #button-add{
@@ -146,13 +154,13 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;      /* remove contorno ao clicar */
-  color: var(--corBotoes);
+  color: white;
   transition-duration: 0.6s;
 }
 
 #button-add:hover{
   color: white;
-  background-color: var(--corBotoes);
+  background-color: rgba(255, 255, 255, 0.046);
 }
 
 #button-add:active{
@@ -172,11 +180,14 @@ body {
 }
 
 .task-item {
-  background: white;
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
   padding: 1rem; /* padding adaptável */
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #ddd;
+  /* border: 1px solid #1c1c1c; */
   cursor: grab;
   font-size: 1rem; /* ajusta conforme o usuário muda zoom */
   display: flex;
@@ -212,8 +223,8 @@ body {
 }
 
 .task-item input[type="checkbox"]:checked + .custom-checkbox {
-  background-color: var(--corBotoes); /* preenche o círculo */
-  border-color: var(--corBotoes); /* opcional, deixa a borda do mesmo tom */
+  background-color: white; /* preenche o círculo */
+  border-color: white; /* opcional, deixa a borda do mesmo tom */
 }
 
 .task-item input[type="checkbox"]:checked + .custom-checkbox + span {
@@ -224,6 +235,7 @@ body {
 span{
   font-weight: 300;
   font-size: 1.2rem;
+  color: white;
 }
 
 .task-actions{
@@ -237,7 +249,7 @@ span{
   cursor: pointer;
   font-size: 16px; /* tamanho do ícone */
   padding: 4px;
-  color: var(--corBotoes);
+  color: rgb(176, 176, 176);
 }
 
 .button-delete:hover{
