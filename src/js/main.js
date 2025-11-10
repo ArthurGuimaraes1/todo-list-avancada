@@ -1,7 +1,21 @@
-import { configurarExclusaoTarefas } from "./tasks.js";
-import { popupCriarTarefa } from "./popup.js";
+import { renderTasks, addTask, deleteTask } from './taskManager.js';
 
-configurarExclusaoTarefas();
+const taskContainer = document.querySelector('.task-container');
+const addButton = document.querySelector('#button-add');
 
-const popup = popupCriarTarefa("#pop-up");
-document.querySelector("#button-add").addEventListener("click", popup);
+renderTasks(taskContainer);
+
+addButton.addEventListener('click', () => {
+  const input = document.querySelector('#task-input');
+  if (input.value.trim()) {
+    addTask(taskContainer, input.value.trim());
+    input.value = '';
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('button-delete')) {
+    const taskItem = e.target.closest('.task-item');
+    deleteTask(taskContainer, taskItem);
+  }
+});
